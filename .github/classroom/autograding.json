@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "name": "Example 1",
+      "setup": "javac src/SortStrings.java",
+      "run": "java -cp src SortStrings",
+      "input": "3\nJohn\nAlice\nBob",
+      "output": "Alice\nBob\nJohn",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 25
+    },
+    {
+      "name": "Case Sensitivity (Zebra vs apple)",
+      "setup": "javac src/SortStrings.java",
+      "run": "java -cp src SortStrings",
+      "input": "2\nZebra\napple",
+      "output": "Zebra\napple",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 25
+    },
+    {
+      "name": "Already Sorted",
+      "setup": "javac src/SortStrings.java",
+      "run": "java -cp src SortStrings",
+      "input": "3\nApple\nBanana\nCherry",
+      "output": "Apple\nBanana\nCherry",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 25
+    },
+    {
+      "name": "Reverse Sorted",
+      "setup": "javac src/SortStrings.java",
+      "run": "java -cp src SortStrings",
+      "input": "3\nZoo\nWorld\nHello",
+      "output": "Hello\nWorld\nZoo",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 25
+    }
+  ]
+}
