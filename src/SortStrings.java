@@ -3,11 +3,23 @@ import java.util.Arrays;
 
 public class SortStrings {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        // TODO: Read N
-        // TODO: Handle the newline after N
-        // TODO: Read N strings into an array
-        // TODO: Sort the array (Arrays.sort uses lexicographical order by default)
-        // TODO: Print the sorted strings, one per line
+        try (Scanner sc = new Scanner(System.in)) {
+            if (!sc.hasNextInt()) return;
+            int n = sc.nextInt();
+            sc.nextLine(); // consume newline after n
+
+            String[] names = new String[n];
+            for (int i = 0; i < n; i++) {
+                if (sc.hasNextLine()) {
+                    names[i] = sc.nextLine();
+                }
+            }
+
+            Arrays.sort(names);
+
+            for (String name : names) {
+                System.out.println(name);
+            }
+        }
     }
 }
